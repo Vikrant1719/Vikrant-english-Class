@@ -41,13 +41,13 @@
       if (selectedStep !== null) return (
         <div style={{minHeight:'100vh', background:'#efe7de', padding:'24px', fontFamily:'Inter,sans-serif'}}>
           <div style={{maxWidth:'1200px', margin:'0 auto'}}>
-            <a href="ver.html">
+            
             <button onClick={() => setSelectedStep(null)}
               style={{marginBottom:'24px', padding:'10px 20px', borderRadius:'999px',
                 background:'#12343b', color:'#fff', border:'none', cursor:'pointer', fontSize:'15px'}}>
               ← Back
             </button>
-            </a>
+            
 
             <div style={{background:'#12343b', borderRadius:'35px', padding:'40px', color:'#fff', boxShadow:'0 20px 60px rgba(0,0,0,0.3)'}}>
               <h1 style={{fontSize:'48px', fontWeight:'800', marginBottom:'12px'}}>{steps[selectedStep].title}</h1>
