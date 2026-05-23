@@ -70,17 +70,51 @@
                         </div>
                       ))}
                     </div>
-                    <button style={{marginTop:'14px', background:'#12343b', color:'#fff',
-                      padding:'8px 18px', borderRadius:'999px', border:'none', cursor:'pointer', fontSize:'13px'}}>
-                      Start Lesson
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+                    <div style={{
+  marginTop:'14px',
+  display:'grid',
+  gridTemplateColumns:'repeat(5,1fr)',
+  gap:'6px'
+}}>
+
+  {lesson.topics.map((t, j) => (
+    <div key={j} style={{textAlign:'center'}}>
+
+      <div style={{
+        background:'#efe7de',
+        color:'#12343b',
+        textAlign:'center',
+        borderRadius:'10px',
+        padding:'6px 2px',
+        fontSize:'11px',
+        fontWeight:'600'
+      }}>
+        {t}
+      </div>
+
+      {j === 0 && (
+        <button
+          onClick={() => window.location.href='quiz.html'}
+          style={{
+            marginTop:'5px',
+            background:'#12343b',
+            color:'#fff',
+            border:'none',
+            borderRadius:'999px',
+            padding:'5px 8px',
+            fontSize:'10px',
+            cursor:'pointer',
+            fontWeight:'700'
+          }}
+        >
+          Open Quiz
+        </button>
+      )}
+
+    </div>
+  ))}
+
+</div>
 
       /* ── STEPS PAGE ── */
       if (page === 'steps') return (
